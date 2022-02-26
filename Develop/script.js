@@ -4,24 +4,24 @@
 function generatePassword() {
   console.log("The button was clicked!!");
 
+
   var characterLength = function() {
-  let characterLength=prompt("How many characters would you like in your password?");
-  let length = Number (characterLength);
-
-   if (characterLength >= 8 && characterLength <= 128) {
-    lowerCase (); //return to the next option
-    }
-    else {
-      characterLength();
-    
-    } 
-  }
-  characterLength();
+    let characterlength=prompt("How many characters would you like in your password?");
+    let length = Number (characterlength);
   
-  var lowerCase = function() {
-    
-    let lowerCase=confirm("Would you like to include lowercase letters?");
+     if (characterlength >= 8 && characterlength <= 128) {
+      lowerCase (); //return to the next option
+      }
+      else {
+        characterLength();
+      
+      } 
+    }
+    characterLength(); 
 
+
+  var upperCase = function() {
+    let uppercase = confirm("Would you like to include lowercase letters?");
     if (confirm == true) {
       //move to next question
     }
@@ -29,8 +29,47 @@ function generatePassword() {
       //move to next question
     }
   }
-
+  upperCase();
+  
+  var lowerCase = function() {
     
+    let lowercase = confirm("Would you like to include lowercase letters?");
+
+    if (confirm == true) {
+      //move to next question
+      upperCase();
+    }
+    else {
+      //move to next question
+      upperCase()
+    }
+  }
+  lowerCase();
+
+  var numeric = function() {
+    let randomNumber = confirm("Would you like to include numbers in your password?");
+
+    if (confirm == true) {
+    //next question
+    }
+    else {
+    //next question
+    }
+  }
+  numeric();
+
+  var specialCharacter = function() {
+    let randomSymbols = confirm("Would you like to include special characters in your password?");
+
+    if (confirm == true) {
+      //generate password
+    }
+    else {
+      //generate password
+    }
+  }
+
+  
 
 // validate the input that the user puts in 
 

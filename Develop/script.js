@@ -1,5 +1,6 @@
 // Assignment code here
 var possibleCharacters = []
+var character = 0
 //Prompt user for password criteria after button is clicked (password length, uppercase, lowercase, numbers & special characters)
 function generatePassword() {
   console.log("The button was clicked!!");
@@ -7,7 +8,7 @@ function generatePassword() {
 
   var characterLength = function () {
     var characterlength = window.prompt("How many characters would you like in your password? You must pick a number between 8 and 128.");
-    let character = Number(characterlength);
+    character = Number(characterlength);
 
     if (characterlength >= 8 && characterlength <= 128) {
       console.log("The correct number was entered!"); //next option

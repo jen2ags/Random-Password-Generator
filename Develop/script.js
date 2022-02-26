@@ -6,13 +6,14 @@ function generatePassword() {
 
 
   var characterLength = function() {
-    let characterlength=prompt("How many characters would you like in your password?");
-    let length = Number (characterlength);
+    var characterlength= window.prompt("How many characters would you like in your password? You must pick a number between 8 and 128.");
+    let character = Number (characterlength);
   
      if (characterlength >= 8 && characterlength <= 128) {
-      lowerCase (); //return to the next option
+      console.log("The correct number was entered!"); //next option
       }
       else {
+        window.alert("Please try again!");
         characterLength();
       
       } 
@@ -21,54 +22,60 @@ function generatePassword() {
 
 
   var upperCase = function() {
-    let uppercase = confirm("Would you like to include lowercase letters?");
-    if (confirm == true) {
+    var uppercase = window.confirm("Would you like to include uppercase letters?");
+    if (uppercase == true) {
       //move to next question
+      console.log("OK was clicked! You are including uppercase.");
     }
     else {
       //move to next question
+      console.log("Cancel was clicked! You are not including uppercase.");
     }
   }
   upperCase();
   
   var lowerCase = function() {
     
-    let lowercase = confirm("Would you like to include lowercase letters?");
+    var lowercase = confirm("Would you like to include lowercase letters?");
 
-    if (confirm == true) {
+    if (lowercase == true) {
       //move to next question
-      upperCase();
+      console.log("OK was clicked! You are including lowercase.");
     }
     else {
       //move to next question
-      upperCase()
+      console.log("Cancel was clicked! You are not including lowercase.");
     }
   }
   lowerCase();
 
   var numeric = function() {
-    let randomNumber = confirm("Would you like to include numbers in your password?");
+    var randomNumber = confirm("Would you like to include numbers in your password?");
 
-    if (confirm == true) {
+    if (randomNumber == true) {
     //next question
+    console.log("OK was clicked! You are including numbers.");
     }
     else {
     //next question
+    console.log("Cancel was clicked! You are not including numbers.");
     }
   }
   numeric();
 
   var specialCharacter = function() {
-    let randomSymbols = confirm("Would you like to include special characters in your password?");
+    var randomSymbols = confirm("Would you like to include special characters in your password?");
 
-    if (confirm == true) {
+    if (randomSymbols == true) {
       //generate password
+      console.log("OK was clicked! You are including special characters.");
     }
     else {
       //generate password
+      console.log("Cancel was clicked! You are not including special characters!");
     }
   }
-
+specialCharacter();
   
 
 // validate the input that the user puts in 

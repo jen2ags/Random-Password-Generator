@@ -76,7 +76,7 @@ function generatePassword() {
   numeric();
 
   var specialCharacter = function () {
-    var symbolCharacters = ['!', '@', '#', '$', '%', '&', '?', '/', '~', '*', '(', ')', '^']
+    var symbolCharacters = ['!', '@', '#', '$', '%', '&', '?', '/', '~', '*', '(', ')', '^', '<', '>', '+', '=', '-', '_']
     var randomSymbols = confirm("Would you like to include special characters in your password?");
 
     if (randomSymbols == true) {
@@ -86,7 +86,7 @@ function generatePassword() {
       console.log("OK was clicked! You are including special characters.");
     }
     else {
-      //generate password
+      //generate password9
       console.log("Cancel was clicked! You are not including special characters!");
     }
   }
@@ -98,19 +98,14 @@ function generatePassword() {
     console.log(passwordChar)
 
     }
+   
   }
+  
   createPassword();
-
-  // validate the input that the user puts in 
-
-  //Password is generated
-
-
-  //Display the generated password on the page
-
-
-  return "Your password was generated!";
+  return "You created a password";
+ 
 }
+
 
 function getRandomCharacter(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length);

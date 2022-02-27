@@ -11,6 +11,7 @@ A website that you can input specifications on upper case, lower case, numbers, 
 ## Website
 
 ## Screen Shot
+![Random Password Generator Screenshot](https://user-images.githubusercontent.com/97859629/155868418-d1a5cdeb-fa87-4b91-9574-158c50be7576.png)
 
 
 ## Contribution

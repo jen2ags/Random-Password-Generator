@@ -93,16 +93,17 @@ function generatePassword() {
   specialCharacter();
 
   var createPassword = function () {
+    var password = "";
     for (let index = 0; index < character; index++) {
     var passwordChar = getRandomCharacter(possibleCharacters)
     console.log(passwordChar)
-
+    password +=passwordChar;
     }
-   
+    return password;
   }
+  return createPassword();
+
   
-  createPassword();
-  return "You created a password";
  
 }
 
